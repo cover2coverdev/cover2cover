@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { $trpcClient } = useNuxtApp()
 
 //TODO: add eslint config
 
@@ -7,6 +6,6 @@ const { $trpcClient } = useNuxtApp()
 
 <template>
   <div>
-    <Hello/>
+    <VHello />
   </div>
 </template>

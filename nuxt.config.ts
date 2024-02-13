@@ -4,7 +4,10 @@ export default defineNuxtConfig({
     preset: 'vercel'
   },
   devtools: { enabled: true },
-  modules: ["@nuxt/test-utils/module", 'nuxt-icon', '@unocss/nuxt'],
+  modules: ["@nuxtjs/eslint-module", "@nuxt/test-utils/module", 'nuxt-icon', '@unocss/nuxt'],
+  eslint: {
+    
+  },
   build: {
     transpile: ["trpc-nuxt"],
   },
