@@ -6,26 +6,21 @@ useHead({ htmlAttrs: { 'data-theme': 'light' } })
 </script>
 
 <template>
-  <div>
-    <VHello />
-    <div
-      role="alert"
-      class="alert alert-info"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        class="stroke-current shrink-0 w-6 h-6"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-      <span>New software update available.</span>
+  <div class="hero min-h-screen bg-base-200">
+    <div class="hero-content text-center">
+      <div class="max-w-md">
+        <h1 class="text-5xl font-bold">
+          Welcome to <br>
+          Cover 2 Cover
+        </h1>
+        <p class="py-6">
+          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.
+          In deleniti eaque aut repudiandae et a id nisi.
+        </p>
+        <button class="btn btn-primary">
+          Get Started
+        </button>
+      </div>
     </div>
   </div>
 </template>
