@@ -11,7 +11,7 @@ useHead({ htmlAttrs: { 'data-theme': 'light' } })
       <div class="max-w-md">
         <h1 class="text-5xl font-bold">
           Welcome to <br>
-          Cover 2 Cover
+          cover 2 cover
         </h1>
         <p class="py-6">
           Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.
