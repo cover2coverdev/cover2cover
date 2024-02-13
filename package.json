@@ -14,6 +14,7 @@
     "@trpc/client": "^10.45.1",
     "@trpc/server": "^10.45.1",
     "nuxt": "^3.10.1",
+    "radix-vue": "^1.4.3",
     "trpc-nuxt": "^0.10.19",
     "vue": "^3.4.15",
     "vue-router": "^4.2.5",
