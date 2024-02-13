@@ -1,75 +1,45 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
+# Cover 2 Cover
+TODO: add description
 ## Setup
-
-Make sure to install the dependencies:
-
 ```bash
-# npm
-npm install
-
-# pnpm
+#install deps
 pnpm install
 
-# yarn
-yarn install
+#install vercel cli
+pnpm i -g vercel@latest
 
-# bun
-bun install
+#get env variables
+vercel env pull .env
+
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Development
 
 ```bash
-# npm
-npm run dev
+#run in dev
+pnpm dev -o
 
-# pnpm
-pnpm run dev
+#run tests in ui mode
+npx vitest --ui
 
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+### Library Docs
 
-Build the application for production:
+- [Nuxt Docs](https://nuxt.com/docs/getting-started/introduction)
+- [tRPC Docs](https://trpc.io/docs/quickstart#2-add-a-query-procedure)
+- [Vue 3 Docs](https://vuejs.org/guide/quick-start.html)
+- [Daisy UI Docs](https://daisyui.com/)
+- [TailwindCSS Docs](https://tailwindcss.com/docs/utility-first)
+- [Drizzle Docs](https://orm.drizzle.team/docs/overview)
+- [Vitest Docs](https://vitest.dev/guide/#writing-tests)
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
+## Preview Prod Build
 
 ```bash
-# npm
-npm run preview
 
 # pnpm
 pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
