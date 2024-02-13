@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+  .spoiler-text {
+    @apply inline-block rounded-md transition-opacity duration-500;
+  }
+
+  .spoiler-text[data-state="hidden"] {
+    @apply bg-black !text-transparent text-black/80 focus:bg-black/80 hover:bg-black/80 hover:text-black/80 selection:select-none cursor-pointer;
+  }
+  .spoiler-text[data-state="visible"] {
+    @apply bg-slate-200;
+  }
+
+}

@@ -1,8 +1,7 @@
 <script setup lang="ts">
-useHead({ htmlAttrs: { 'data-theme': 'light' } })
+useHead({ htmlAttrs: { "data-theme": "pastel" } });
 
-//TODO: add eslint config
-
+const hidden = ref(true);
 </script>
 
 <template>
@@ -14,10 +13,13 @@ useHead({ htmlAttrs: { 'data-theme': 'light' } })
           cover 2 cover
         </h1>
         <p class="py-6">
-          Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi.
-          In deleniti eaque aut repudiandae et a id nisi.
+          We have tons of exciting <Spoiler> things </Spoiler> to <Spoiler>show</Spoiler> you soon. We hope you will
+          like our app. We present to you <Spoiler>cover2cover</Spoiler>
         </p>
-        <button class="btn btn-primary">
+        <button
+          class="btn btn-primary"
+          @click="hidden = false"
+        >
           Get Started
         </button>
       </div>
