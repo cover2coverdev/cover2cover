@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { publicProcedure, router } from "../trpc";
-import { todoRouter } from "./todo";
+import { db } from "~/server/api/simple-connect";
+import { ExampleUsers } from "~/lib/schema";
 
 export const appRouter = router({
   hello: publicProcedure
@@ -14,7 +15,13 @@ export const appRouter = router({
         greeting: `hello ${input?.text ?? "world"}`,
       };
     }),
-  todo: todoRouter,
+    users: publicProcedure.query(async () => {
+      const users = await db.select().from(ExampleUsers)
+
+      return {
+        users
+      };
+    }),
 });
 
 // export type definition of API
