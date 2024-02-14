@@ -1,26 +1,27 @@
 import { z } from "zod";
 import { publicProcedure, router } from "../trpc";
-import { db } from "~/server/api/simple-connect";
-import { ExampleUsers } from "~/lib/schema";
+import { TRPCError } from "@trpc/server";
+import { GoogleBookVolume } from "~/types/googlebooks";
 
 export const appRouter = router({
-  hello: publicProcedure
+  googlebooks: publicProcedure
     .input(
       z.object({
-        text: z.string().nullish(),
+        q: z.string(),
+        maxResults: z.number().min(1).max(40).optional(),
       })
     )
     .query(({ input }) => {
-      return {
-        greeting: `hello ${input?.text ?? "world"}`,
-      };
-    }),
-    users: publicProcedure.query(async () => {
-      const users = await db.select().from(ExampleUsers)
+      const BASE_URL = "https://www.googleapis.com/books/v1/volumes";
+      const {GOOGLE_BOOKS_API_KEY} =  useRuntimeConfig()
+      return $fetch<{ items: GoogleBookVolume[] }>(BASE_URL, { params: {...input, key: GOOGLE_BOOKS_API_KEY} }).catch((e) => {
+        throw new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Failed to fetch from googlebooks API.",
+          cause: e,
+        });
+      });
 
-      return {
-        users
-      };
     }),
 });
 

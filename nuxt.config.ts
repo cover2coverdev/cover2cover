@@ -4,6 +4,9 @@ export default defineNuxtConfig({
   nitro: {
     preset: "vercel",
   },
+  runtimeConfig: {
+    GOOGLE_BOOKS_API_KEY: process.env.GOOGLE_BOOKS_API_KEY
+  },
   devtools: { enabled: true },
   modules: ["@nuxtjs/eslint-module", "@nuxt/test-utils/module", "nuxt-icon", "@nuxtjs/tailwindcss"],
   eslint: {},
