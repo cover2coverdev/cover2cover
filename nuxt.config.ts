@@ -1,4 +1,5 @@
 import daisyui from "daisyui";
+import tailwindTypography from '@tailwindcss/typography'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   nitro: {
@@ -8,13 +9,17 @@ export default defineNuxtConfig({
     GOOGLE_BOOKS_API_KEY: process.env.GOOGLE_BOOKS_API_KEY
   },
   devtools: { enabled: true },
-  modules: ["@nuxtjs/eslint-module", "@nuxt/test-utils/module", "nuxt-icon", "@nuxtjs/tailwindcss"],
-  eslint: {},
+  modules: ["@nuxtjs/eslint-module", "@nuxt/test-utils/module", "nuxt-icon", "@nuxtjs/tailwindcss", '@nuxtjs/color-mode'],
+  colorMode: {
+    dataValue: 'theme',
+    preference: 'pastel',
+    fallback: 'dark'
+  },
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
     exposeConfig: false,
     config: {
-      plugins: [daisyui],
+      plugins: [tailwindTypography, daisyui],
       daisyui: {
         logs: false,
         themes: [
