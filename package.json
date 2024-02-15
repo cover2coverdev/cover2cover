@@ -15,6 +15,8 @@
     "@trpc/server": "^10.45.1",
     "@vercel/postgres": "^0.7.2",
     "drizzle-orm": "^0.29.3",
+    "lexical": "^0.13.1",
+    "lexical-vue": "^0.8.2",
     "nuxt": "^3.10.1",
     "pg": "^8.11.3",
     "trpc-nuxt": "^0.10.19",

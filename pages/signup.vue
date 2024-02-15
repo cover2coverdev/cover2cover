@@ -19,5 +19,8 @@ definePageMeta({
       <blockquote>Hello world</blockquote>
       <!-- ... -->
     </article>
+    <ClientOnly>
+      <TextEditor />
+    </ClientOnly>
   </div>
 </template>
